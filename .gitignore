@@ -1,0 +1,6 @@
+# Ignore all files, except go source files and others, like this .gitignore and markdown files 
+*
+!*.go
+!*.md
+!.gitignore
+
