@@ -27,5 +27,6 @@ After this, I can run simple Go scripts directly in Sublime edit by usin the `‚å
 (https://github.com/golang/sublime-build/blob/master/docs/configuration.md)[https://github.com/golang/sublime-build/blob/master/docs/configuration.md]
 (https://golang.org/cmd/go/#hdr-Compile_and_run_Go_program)[https://golang.org/cmd/go/#hdr-Compile_and_run_Go_program]
 (https://blog.golang.org/go-slices-usage-and-internals)[https://blog.golang.org/go-slices-usage-and-internals]
+(https://www.golangprograms.com/)[https://www.golangprograms.com/]
 
 
