@@ -4,13 +4,17 @@ import (
   f "fmt"
   t "time"
   "math"
+  "math/rand"
 )
 
 func main() {
 	dataTypes()
 	looper()
 	switcheroo()
-	arrays()
+	a := []string{"a", "quick", "brown", "fox"}
+	arrays(a)
+	ranges(a)
+	timeAndTemp()
 	maps()
 }
 
@@ -63,18 +67,42 @@ func switcheroo() {
 	}
 }
 
-func arrays() {
-	a := []int{10, 20, 30, 40, 50} // string{"a", "quick", "brown"}
-	b := make([]int, len(a))
+func arrays(a []string) {
+	b := make([]string, len(a))
 	copy(b, a)
 	f.Println("len(a)=", len(a), "; a=", a)
 	f.Println("len(b)=", len(b), "; b=", b)
 
-	a = append(a, 60, 70, 80)
+	a = append(a, "jumps", "over", "the", "lazy", "dog")
 	f.Println("len(a)=", len(a), "; a=", a)
 	f.Println("len(b)=", len(b), "; b=", b)
 	f.Println("slice of last 3 of a=", a[len(a)-3:])
 	f.Println("slice of last 3 of b=", b[len(b)-3:])
+}
+
+func ranges(a []string) {
+	length := 0
+	m := make(map[int]string)
+	for i, s := range a {
+		length += len(s)
+		m[i] = s
+	}
+	f.Println("Map of strings:", m)
+	f.Println("Total length of all strings =", length)
+
+	f.Println("Characters in \"Hello Go!\"")
+	for i,c := range "Hello Go!" {
+		f.Println(" ", i, c)
+	}
+}
+
+func timeAndTemp() {
+	late, cold := stringAndInt()
+	f.Printf("It's %d degrees at %s\n", cold, late)
+}
+
+func stringAndInt() (t.Time, int) {
+	return t.Now().Local(), rand.Int() % 111
 }
 
 func maps() {
