@@ -9,7 +9,6 @@ import (
 func main() {
 	timeAndTemp()
 	closures()
-	recursive()
 }
 
 func timeAndTemp() {
@@ -38,16 +37,4 @@ func ratchet(n int) func() int {
 		n++ 
 		return n
 	}
-}
-
-func recursive() {
-		f.Println("5!=", fact(5))
-		f.Println("15!=", fact(15))
-}
-
-func fact(n int) int {
-	if n == 1 {
-		return 1
-	} 
-	return n * fact(n-1)
 }
