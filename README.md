@@ -20,7 +20,9 @@ After this, I can run simple Go scripts directly in Sublime edit by usin the `‚å
 # Tutorials
 
 [https://gobyexample.com](https://gobyexample.com)
+
 [https://tour.golang.org/basics/](https://tour.golang.org/basics/)
+
 [http://www.golangbootcamp.com/book/](http://www.golangbootcamp.com/book/)
 
 # References
