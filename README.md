@@ -17,6 +17,11 @@ As [this document](https://github.com/golang/go/wiki/GOPATH) says, you only need
 
 After this, I can run simple Go scripts directly in Sublime edit by usin the `⌘B` key-chord.
 
+
+# CI
+
+I use my tried-and-trusted Travis CI for this repo. See the `.travis.yml` for the configuration.
+
 # Tutorials
 
 [https://gobyexample.com](https://gobyexample.com)
