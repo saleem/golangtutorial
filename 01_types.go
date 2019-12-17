@@ -5,11 +5,8 @@ import (
   "math"
 )
 
-func main() {
-	dataTypes()
-}
-
-func dataTypes() {
+func DataTypes() {
+	f.Println("********** DataTypes **********")
 	const h = "Hello, " + "World!"
 	f.Println(h)
 

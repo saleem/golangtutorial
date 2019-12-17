@@ -22,7 +22,9 @@ func producer(someChannel chan string) {
 	someChannel <- "poof!"
 }
 
-func main() {
+func Channels() {
+	f.Println("********** Channels **********")
+
 	messages := make(chan string)
 	f.Printf("Messages is of type '%T'\n", messages)
 

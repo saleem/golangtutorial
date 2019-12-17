@@ -6,11 +6,9 @@ import (
     "errors"
 )
 
-func main() {
-	printShapes()
-}
+func Interfaces() {
+	f.Println("********** Interfaces **********")
 
-func printShapes() {
 	r := rectangle{width: 3, height: 4}
 	c := circle{radius: 5}
 	t := triangle{sideA: 3, sideB: 4, sideC: 5}

@@ -6,12 +6,14 @@ import (
   "math/rand"
 )
 
-func main() {
+func Functions() {
 	timeAndTemp()
 	closures()
 }
 
 func timeAndTemp() {
+	f.Println("********** Functions **********")
+
 	late, cold := stringAndInt()
 	f.Printf("It's %d degrees at %s\n", cold, late)
 }
@@ -21,6 +23,8 @@ func stringAndInt() (t.Time, int) {
 }
 
 func closures() {
+	f.Println("********** Closures **********")
+
 	init := 42
 	r := ratchet(init)
 	f.Printf("Ratcheting up from %d yields: %d, %d, %d\n",

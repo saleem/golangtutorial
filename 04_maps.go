@@ -2,11 +2,9 @@ package main
 
 import f "fmt"
 
-func main() {
-	maps()
-}
+func Maps() {
+	f.Println("********** Maps **********")
 
-func maps() {
 	m := make(map[string]int)
 	m["a"] = 9
 	m["b"] = 3

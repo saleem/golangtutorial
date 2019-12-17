@@ -11,7 +11,9 @@ func routine(from string) {
 	}
 }
 
-func main() {
+func Routines() {
+	f.Println("********** Routines **********")
+
 	routine("direct")
 
 	go routine("goroutine")

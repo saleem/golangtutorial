@@ -2,12 +2,14 @@ package main
 
 import f "fmt"
 
-func main() {
+func ArraysAndRanges() {
 	a := variadicArrays("a", "quick", "brown", "fox")
 	ranges(a)
 }
 
 func variadicArrays(a ...string) []string {
+	f.Println("********** Arrays **********")
+
 	b := make([]string, len(a))
 	for i, s := range a {
 		b[i] = s
@@ -24,6 +26,8 @@ func variadicArrays(a ...string) []string {
 }
 
 func ranges(a []string) {
+	f.Println("********** Ranges **********")
+	
 	length := 0
 	m := make(map[int]string)
 	for i, s := range a {

@@ -2,12 +2,14 @@ package main
 
 import f "fmt"
 
-func main() {
+func Pointers() {
   recursive()
   pointer()
 }
 
 func recursive() {
+	f.Println("********** Recursion **********")
+
 	f.Println("Recursive function: ")
 	f.Println("  5!=", factR(5))
 	f.Println("  15!=", factR(15))
@@ -21,6 +23,8 @@ func factR(n int) int {
 }
 
 func pointer() {
+	f.Println("********** Pointers **********")
+
 	f.Println("Recursive with pointers: ")
   	r := 1
 	factP(5, &r)

@@ -5,12 +5,9 @@ import (
   t "time"
 )
 
-func main() {
-	looper()
-	switcheroo()
-}
+func Looper() {
+	f.Println("********** For Loop **********")
 
-func looper() {
 	for i := 1; i <= 20; i++ {
 		if i%3 == 0 {
 			f.Print("fizz")
@@ -25,7 +22,9 @@ func looper() {
 	}
 }
 
-func switcheroo() {
+func Switcheroo() {
+	f.Println("********** Switch Case **********")
+	
 	switch t.Now().Weekday() {
 	case t.Saturday, t.Sunday:
 		f.Println("Hooray for the weekend!")

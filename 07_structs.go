@@ -2,11 +2,9 @@ package main
 
 import f "fmt"
 
-func main() {
-	printBioForms()
-}
+func Structs() {
+	f.Println("********** Structs **********")
 
-func printBioForms() {
 	forms := [4]bioForm {
 		bioForm{"Carcharadon", "Carcharias", true}, bioForm{"Tyrannosaurus", "Rex", false}, Hominin("Sapiens"),Hominin("Habilis")}
 
