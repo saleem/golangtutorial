@@ -4,4 +4,4 @@ go:
  - tip
 
 script:
- - go run 01_types.go
+ - go run *.go
