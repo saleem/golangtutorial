@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/saleem/golangtutorial.svg?branch=master)](https://travis-ci.org/saleem/golangtutorial)
+
 # Installation
 
 [https://ahmadawais.com/install-go-lang-on-macos-with-homebrew/](https://ahmadawais.com/install-go-lang-on-macos-with-homebrew/)
