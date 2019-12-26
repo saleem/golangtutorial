@@ -1,9 +1,9 @@
 package main
 
 import (
-    f "fmt"
-    "math"
-    "errors"
+	"errors"
+	f "fmt"
+	"math"
 )
 
 func Interfaces() {
@@ -55,26 +55,23 @@ type triangle struct {
 func (r rectangle) valid() error {
 	if r.width > 0 && r.height > 0 {
 		return nil
-	} else {
-		return errors.New("Width and height of rectangle must be greater than 0")
 	}
+	return errors.New("Width and height of rectangle must be greater than 0")
 }
 
 func (c circle) valid() error {
 	if c.radius > 0 {
 		return nil
-	} else {
-		return errors.New("Radius of circle must be greater than 0")
 	}
+	return errors.New("Radius of circle must be greater than 0")
 }
 
 func (t triangle) valid() error {
 	p := (t.sideA + t.sideB + t.sideC) / 2.0
 	if p > t.sideA && p > t.sideB && p > t.sideC {
 		return nil
-	} else {
-		return errors.New("Sum of any two sides of a triangle must be greater than the third side")
 	}
+	return errors.New("Sum of any two sides of a triangle must be greater than the third side")
 }
 
 func (r rectangle) area() (float64, error) {

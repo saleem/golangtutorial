@@ -1,9 +1,9 @@
 package main
 
 import (
-  f "fmt"
-  t "time"
-  "math/rand"
+	f "fmt"
+	"math/rand"
+	t "time"
 )
 
 func Functions() {
@@ -31,14 +31,14 @@ func closures() {
 		init, r(), r(), r())
 
 	init = 1e5
-	r = ratchet(init)	
+	r = ratchet(init)
 	f.Printf("Ratcheting up from %d yields: %d, %d, %d\n",
 		init, r(), r(), r())
 }
 
 func ratchet(n int) func() int {
 	return func() int {
-		n++ 
+		n++
 		return n
 	}
 }

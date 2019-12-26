@@ -21,4 +21,6 @@ func main() {
 	Routines()
 
 	Channels()
+
+	MoreChannels()
 }

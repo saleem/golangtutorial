@@ -1,15 +1,9 @@
 package main
 
 import (
-    f "fmt"
-    "time"
+	f "fmt"
+	"time"
 )
-
-func routine(from string) {
-	for i := 0; i < 3; i++ {
-		f.Println(from, ":", i)
-	}
-}
 
 func Routines() {
 	f.Println("********** Routines **********")
@@ -24,4 +18,10 @@ func Routines() {
 
 	time.Sleep(time.Second)
 	f.Println("done")
+}
+
+func routine(from string) {
+	for i := 0; i < 3; i++ {
+		f.Println(from, ":", i)
+	}
 }
