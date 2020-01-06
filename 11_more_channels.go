@@ -2,6 +2,7 @@ package main
 
 import (
 	f "fmt"
+	"strconv"
 	"time"
 )
 
@@ -9,6 +10,7 @@ func MoreChannels() {
 	channelSelector()
 	timeouts()
 	nonBlocking()
+	closeChannels()
 }
 
 func channelSelector() {
@@ -82,5 +84,35 @@ func nonBlocking() {
 		f.Println("received signal", sig)
 	default:
 		f.Println("no activity")
+	}
+}
+
+func closeChannels() {
+	f.Println("********** Closing Channel **********")
+
+	jobs := make(chan string, 5)
+	done := make(chan bool)
+
+	go receiver(jobs, done)
+
+	for j := 1; j <= 3; j++ {
+		producer(jobs, strconv.Itoa(j), 0)
+	}
+	close(jobs)
+	f.Println("sent all jobs")
+
+	<-done
+}
+
+func receiver(from chan string, notifyOnDone chan bool) {
+	for {
+		j, more := <-from
+		if more {
+			f.Printf("Rcvd %s at %s\n", j, time.Now().Format(time.StampMicro))
+		} else {
+			f.Println("Rcvd all messages")
+			notifyOnDone <- true
+			return
+		}
 	}
 }

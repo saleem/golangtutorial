@@ -44,7 +44,7 @@ func producer(someChannel chan string, msg string, optionalWait ...time.Duration
 		time.Sleep(optionalWait[0] * time.Second)
 	}
 
-	f.Println("Message sent at", time.Now().Format(time.StampMicro))
+	f.Printf("Sent %s at %s\n", msg, time.Now().Format(time.StampMicro))
 	someChannel <- msg
 }
 
