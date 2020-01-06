@@ -11,6 +11,7 @@ func MoreChannels() {
 	timeouts()
 	nonBlocking()
 	closeChannels()
+	rangeOverChannels()
 }
 
 func channelSelector() {
@@ -102,6 +103,21 @@ func closeChannels() {
 	f.Println("sent all jobs")
 
 	<-done
+}
+
+func rangeOverChannels() {
+	f.Println("********** Range Over Channels **********")
+
+	queue := make(chan string, 3)
+	queue <- "one"
+	queue <- "two"
+	queue <- "buckle my shoe"
+	close(queue)
+
+	for elem := range queue {
+		f.Printf("Received %s\n", elem)
+	}
+
 }
 
 func receiver(from chan string, notifyOnDone chan bool) {
