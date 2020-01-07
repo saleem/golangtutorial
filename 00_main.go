@@ -3,8 +3,7 @@ package main
 func main() {
 	DataTypes()
 
-	Looper()
-	Switcheroo()
+	LoopAndSwitch()
 
 	ArraysAndRanges()
 
@@ -23,4 +22,6 @@ func main() {
 	Channels()
 
 	MoreChannels()
+
+	TimersAndTickers()
 }

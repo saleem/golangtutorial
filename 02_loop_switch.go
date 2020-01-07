@@ -1,11 +1,16 @@
 package main
 
 import (
-  f "fmt"
-  t "time"
+	f "fmt"
+	t "time"
 )
 
-func Looper() {
+func LoopAndSwitch() {
+	looper()
+	switcheroo()
+}
+
+func looper() {
 	f.Println("********** For Loop **********")
 
 	for i := 1; i <= 20; i++ {
@@ -22,9 +27,9 @@ func Looper() {
 	}
 }
 
-func Switcheroo() {
+func switcheroo() {
 	f.Println("********** Switch Case **********")
-	
+
 	switch t.Now().Weekday() {
 	case t.Saturday, t.Sunday:
 		f.Println("Hooray for the weekend!")
